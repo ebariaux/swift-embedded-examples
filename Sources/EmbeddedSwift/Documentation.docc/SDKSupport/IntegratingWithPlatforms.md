@@ -66,7 +66,7 @@ For detailed instructions on integrating with the Raspberry Pi Pico SDK, see <do
 
 ### ESP32
 
-For ESP microcontrollers using the ESP-IDF framework, see <doc:IntegrateWithESP>. Note that only chips based on RISC-V architecture (e.g. ESP32-C3, ESP32-C6, ESP32-P4) are supported with Embedded Swift. The Xtensa ISA (used in e.g. ESP8266 or ESP32-S2 and ESP32-S3).
+For ESP microcontrollers using the ESP-IDF framework, see <doc:IntegrateWithESP>. Note that only chips based on RISC-V architecture (e.g. ESP32-C3, ESP32-C6, ESP32-P4) are supported with Embedded Swift. The Xtensa ISA (used in e.g. ESP8266 or ESP32-S2 and ESP32-S3) is not supported.
 
 ### STM32
 
@@ -74,6 +74,10 @@ STM32 microcontrollers can be programmed with Embedded Swift in two ways:
 
 1. Using the STM32Cube HAL/LL libraries - This requires proper integration with the STM32Cube build system
 2. Bare-metal approach - See <doc:STM32BaremetalGuide> for details
+
+### Zephyr
+
+For detailed documentation on how to integrate Embedded Swift with Zephyr, see <doc:IntegrateWithZephyr>.
 
 ### Bare-metal Development
 
