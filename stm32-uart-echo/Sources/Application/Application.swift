@@ -11,6 +11,7 @@
 
 import STM32F7X6
 import Support
+import Numerics
 
 @main
 public struct Application {
@@ -67,6 +68,18 @@ public struct Application {
     // MARK: Main Loop
     print("Hello Swift!")
 
+    let maxIterations = 5
+    let c = Complex(-1.0, 1.0)
+    var z = Complex<Double>.zero
+    var iterations: UInt8 = 0
+
+    while iterations < maxIterations && z.magnitude < 2.0 {
+      z = z * z + c
+      iterations += 1
+    }
+  
+    print(iterations)
+
     while true {
       waitRxBufferFull()
       let byte = rx()
@@ -101,6 +114,21 @@ func waitRxBufferFull() {
 
 func rx() -> UInt8 {
   UInt8(usart1.rdr.read().raw.rdr_field)
+}
+
+func print(_ value: UInt8) {
+  printLastDigit(value / 100)
+  printLastDigit(value / 10)
+  printLastDigit(value)
+  waitTxBufferEmpty()
+  tx(value: UInt8(ascii: "\r"))
+  waitTxBufferEmpty()
+  tx(value: UInt8(ascii: "\n"))
+  waitTxBufferEmpty()
+}
+
+func printLastDigit(_ value: UInt8) {
+  putchar(CInt((value % 10) + 0x30))
 }
 
 @_cdecl("Default_Handler")

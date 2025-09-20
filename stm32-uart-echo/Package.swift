@@ -8,12 +8,16 @@ let package = Package(
     .executable(name: "Application", targets: ["Application"])
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-mmio", branch: "main")
+    .package(url: "https://github.com/apple/swift-mmio", branch: "main"),
+    .package(url: "https://github.com/ebariaux/swift-numerics", branch: "main"),
   ],
   targets: [
     .executableTarget(
       name: "Application",
-      dependencies: ["STM32F7X6", "Support"]),
+      dependencies: ["STM32F7X6",
+                     "Support",
+                     .product(name: "Numerics", package: "swift-numerics"),
+      ]),
     // SVD2Swift \
     // --input Sources/STM32F7X6/stm32f7x6.patched.svd \
     // --output Sources/STM32F7X6 \
