@@ -9,7 +9,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-mmio", branch: "main"),
-    .package(url: "https://github.com/ebariaux/swift-numerics", branch: "main"),
+    .package(url: "https://github.com/apple/swift-numerics", from: "1.1.1"),
   ],
   targets: [
     .executableTarget(

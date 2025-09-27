@@ -1,5 +1,5 @@
 {
-  "originHash" : "e87e01f54ed373c08df8602a748346a0f0c6665452330ebc255c3732da118ce9",
+  "originHash" : "96145a497c327c7a7be3628260b841b694623da031cd62914c9db6371ddff1ff",
   "pins" : [
     {
       "identity" : "swift-argument-parser",
@@ -22,10 +22,10 @@
     {
       "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ebariaux/swift-numerics",
+      "location" : "https://github.com/apple/swift-numerics",
       "state" : {
-        "branch" : "main",
-        "revision" : "d46e20b4c551db3ea708b2358967bede1a4dbf0d"
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
       }
     },
     {
