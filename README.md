@@ -12,7 +12,7 @@ This repository is a set of demonstration projects of **Embedded Swift**. Embedd
 
 Each example in this repository contains build and deployment instructions, however there are a couple common steps needed for many of the examples included below:
 
-1. Install [`swift`](https://swift.org) using the [instructions here](https://swiftpackageindex.com/swiftlang/swift-embedded-examples/main/documentation/embeddedswift/installembeddedswift).
+1. Install [`swift`](https://swift.org) using the [instructions here](https://docs.swift.org/embedded/documentation/embedded/installembeddedswift).
 
 2. Install [`uv`](https://github.com/astral-sh/uv), "an extremely fast Python package and project manager", using the [instructions here](https://docs.astral.sh/uv/getting-started/installation/).
 
@@ -30,7 +30,7 @@ Each example in this repository contains build and deployment instructions, howe
 | [rpi-pico-blink-sdk](./rpi-pico-blink-sdk) | Raspberry Pi Pico, Pico 2 | Pico SDK | Blink an LED repeatedly with Swift & the Pico SDK. | <img width="300" src="https://github.com/swiftlang/swift-embedded-examples/assets/1186214/f2c45c18-f9a4-48b4-a941-1298ecc942cb"> |
 | [rpi-pico-blink](./rpi-pico-blink) | Raspberry Pi Pico | None  | Blink an LED repeatedly. | <img width="300" src="https://github.com/swiftlang/swift-embedded-examples/assets/1186214/f2c45c18-f9a4-48b4-a941-1298ecc942cb"> |
 | [rpi-pico2-neopixel](./rpi-pico2-neopixel) | Raspberry Pi Pico 2 | None | Control Neopixel LEDs using the RP2350 PIO. | <img width="300" src="rpi-pico2-neopixel/assets/images/example.jpg"> |
-| [rpi-picow-blink-sdk](./rpi-picow-blink-sdk) | Raspberry Pi Pico W | Pico SDK | Blink an LED to signal 'SOS' in Morse code repeatedly with Swift & the Pico SDK. | <img width="300" src="https://github.com/swiftlang/swift-embedded-examples/assets/26223064/a4949a2e-1887-4325-8f5f-a681963c93d7"> |
+| [rpi-picow-blink-sdk](./rpi-picow-blink-sdk) | Raspberry Pi Pico W, Pico 2W | Pico SDK | Blink an LED to signal 'SOS' in Morse code repeatedly with Swift & the Pico SDK. | <img width="300" src="https://github.com/swiftlang/swift-embedded-examples/assets/26223064/a4949a2e-1887-4325-8f5f-a681963c93d7"> |
 | [stm32-blink](./stm32-blink) | STM32F746G-DISCO | None | Blink an LED repeatedly. | <img width="300" src="https://github.com/swiftlang/swift-embedded-examples/assets/1186214/739e98fd-a438-4a64-a7aa-9dddee25034b"> |
 | [stm32-lcd-logo](./stm32-lcd-logo) | STM32F746G-DISCO | None | Animate the Swift Logo on the built-in LCD. | <img width="300" src="https://github.com/swiftlang/swift-embedded-examples/assets/1186214/9e117d81-e808-493e-a20c-7284ea630f37"> |
 | [stm32-lvgl](./stm32-lvgl) | STM32F746G-DISCO | – | Baremetal setup of LCD, touch panel, DRAM, using the LLVM Embedded toolchain for ARM. Renders graphics, animations, and reacts to user input via LVGL. Includes a macOS/Linux SDL based host simulation app. | <img width="300" src="https://github.com/user-attachments/assets/3b4fefd3-1656-4768-9c64-6cbcb3ff9665"> |
@@ -53,6 +53,7 @@ Note that the SDK integration examples (Pico SDK, Zephyr SDK, etc.) are not reco
 | [EmbeddedSwift nRF52 Examples](https://github.com/nelcea/EmbeddedSwift-nRF52-Examples) | nRF52840 (Development Kit) | A collection of examples using Embedded Swift on top of nRF Connect SDK (Zephyr). |
 | [Swatak](https://github.com/nelcea/EmbeddedSwift-nRF52-Swatak) | nRF52840 (Seeed Studio XIAO) | A reaction time game inspired by BATAK© boards, implemented in Embedded Swift using nRF Connect SDK. |
 | [swift-picosystem-example](https://github.com/jerrodputman/swift-picosystem-example) | PicoSystem | An Embedded Swift demo running on the Pimoroni PicoSystem |
+| [pico-swift-sh1106](https://github.com/mkbrwr/pico-swift-sh1106) | Pico 2 | Display Driver for SH1106 |
 | [PlaydateKit](https://github.com/finnvoor/PlaydateKit) | Playdate | A full featured framework for building Playdate games using Embedded Swift. |
 | [swift-playdate-examples](https://github.com/swiftlang/swift-playdate-examples) | Playdate | An Embedded Swift game running on Playdate by Panic. |
 | [swift-stm32c011-examples](https://github.com/xtremekforever/swift-stm32c011-examples) | STM32 | Examples of running Embedded Swift on the STM32C011, which is a tiny MCU with only 6KB of SRAM and 32KB of flash. |

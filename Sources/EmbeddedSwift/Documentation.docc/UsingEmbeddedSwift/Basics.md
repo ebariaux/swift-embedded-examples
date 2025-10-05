@@ -52,6 +52,8 @@ $ swiftc -target armv7-none-none-eabi -enable-experimental-feature Embedded -wmo
   input1.swift input2.swift ... -c -o output.o
 ```
 
+> Note: Passing only a single `.swift` file to swiftc results in the generation of a `_main` (Mach-O targets) or `main` (ELF) symbol. During linking, this symbol could potentially clash with other objects that also define one. To avoid this, compile multiple Swift files together or use the `-parse-as-library` flag.
+
 Additionally, you probably want to specify additional Clang and/or LLVM flags to get the compiler to produce code for the exact ISA and ABI you need for your target.
 
 For example, a Raspberry Pi Pico / Pico W should target the ARMv6-M architecture via the `armv6m-*` target triple, but the `-mfloat-abi=soft` Clang option should also be used, and if you want to match ABI with libraries built with the GNU toolchain, you might also need `-fshort-enums`. To pass those to Swift, use the `-Xcc` prefix:
@@ -73,6 +75,4 @@ It's very common to integrate with existing SDKs in embedded development. This t
 2. **Creating a bridging header** that exposes the C functions and types from the SDK to Swift.
 3. **Configuring the build system** to compile Swift code with the right flags and link it with the SDK's libraries.
 
-Most embedded SDKs provide a build system integration, commonly with CMake, Make, or their own custom build scripts. At the most basic level, it's always possible to manually call the compiler (`swiftc`) as described above from any build system. This will produce a .o file for the entire Swift module, and then a .o file can typically be directly used in the build system.
-
-For details and concrete examples of how to integrate with more common platforms, SDKs and build systems, see <doc:IntegratingWithPlatforms>.
+Most embedded SDKs provide a build system integration, commonly with CMake, Make, or their own custom build scripts. For details and concrete examples of how to integrate with more common platforms, SDKs and build systems, see <doc:IntegratingWithPlatforms>.
